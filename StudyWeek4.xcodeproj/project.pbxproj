@@ -22,6 +22,7 @@
 		53DC9B2A2A81E786009B3304 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B292A81E786009B3304 /* VideoViewController.swift */; };
 		53DC9B622A83230B009B3304 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B612A83230B009B3304 /* VideoTableViewCell.swift */; };
 		53DC9B662A84768C009B3304 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B652A84768C009B3304 /* TranslationViewController.swift */; };
+		53DC9B682A84B4AA009B3304 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B672A84B4AA009B3304 /* Language.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		53DC9B292A81E786009B3304 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		53DC9B612A83230B009B3304 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		53DC9B652A84768C009B3304 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
+		53DC9B672A84B4AA009B3304 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +83,13 @@
 				53DC9B612A83230B009B3304 /* VideoTableViewCell.swift */,
 				53DC9B292A81E786009B3304 /* VideoViewController.swift */,
 				53DC9B272A81C4D3009B3304 /* WeatherViewController.swift */,
+				53DC9B652A84768C009B3304 /* TranslationViewController.swift */,
+				53DC9B1F2A809C5E009B3304 /* APIKey.swift */,
+				53DC9B672A84B4AA009B3304 /* Language.swift */,
 				53DC9B072A809665009B3304 /* Assets.xcassets */,
 				53DC9B092A809665009B3304 /* LaunchScreen.storyboard */,
 				53DC9B0C2A809665009B3304 /* Info.plist */,
 				53DC9B1B2A809BA2009B3304 /* .gitignore */,
-				53DC9B652A84768C009B3304 /* TranslationViewController.swift */,
-				53DC9B1F2A809C5E009B3304 /* APIKey.swift */,
 			);
 			path = StudyWeek4;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				53DC9B662A84768C009B3304 /* TranslationViewController.swift in Sources */,
 				53DC9B2A2A81E786009B3304 /* VideoViewController.swift in Sources */,
 				53DC9B282A81C4D3009B3304 /* WeatherViewController.swift in Sources */,
+				53DC9B682A84B4AA009B3304 /* Language.swift in Sources */,
 				53DC9B032A809664009B3304 /* ViewController.swift in Sources */,
 				53DC9AFF2A809664009B3304 /* AppDelegate.swift in Sources */,
 				53DC9B622A83230B009B3304 /* VideoTableViewCell.swift in Sources */,
