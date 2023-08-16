@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pzU-tb-gj0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gun-oQ-U3e">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -185,6 +185,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSB-Ng-gYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="634.50704225352115"/>
+        </scene>
+        <!--Asynk View Controller-->
+        <scene sceneID="Unr-Bt-LRj">
+            <objects>
+                <viewController id="OLi-d2-k6J" customClass="AsynkViewController" customModule="StudyWeek4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zuv-l1-QBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-GD-8QD">
+                                <rect key="frame" x="98.333333333333329" y="78.999999999999986" width="196.33333333333337" height="196.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gfV-GD-8QD" secondAttribute="height" multiplier="1:1" id="apZ-su-keB"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bX0-oG-Ixf">
+                                <rect key="frame" x="76" y="454" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RqA-Q0-9uO">
+                                <rect key="frame" x="48" y="717" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nH-Fb-pUK">
+                                <rect key="frame" x="241" y="705" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="OLi-d2-k6J" eventType="touchUpInside" id="hDi-rn-v5J"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdh-7P-HyZ">
+                                <rect key="frame" x="76" y="310" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="viA-GK-jeR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gfV-GD-8QD" firstAttribute="centerX" secondItem="Zuv-l1-QBJ" secondAttribute="centerX" id="LtK-15-j3Y"/>
+                            <constraint firstItem="gfV-GD-8QD" firstAttribute="top" secondItem="viA-GK-jeR" secondAttribute="top" constant="20" id="MB6-vl-38h"/>
+                            <constraint firstItem="gfV-GD-8QD" firstAttribute="width" secondItem="Zuv-l1-QBJ" secondAttribute="width" multiplier="0.5" id="Zgq-Py-U49"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="first" destination="gfV-GD-8QD" id="YsC-ut-TSg"/>
+                        <outlet property="second" destination="jdh-7P-HyZ" id="45k-ar-WWa"/>
+                        <outlet property="third" destination="bX0-oG-Ixf" id="ji0-0l-bbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIQ-OQ-qIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="640"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="IM8-5f-x9e">

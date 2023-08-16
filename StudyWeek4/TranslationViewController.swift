@@ -17,6 +17,8 @@ class TranslationViewController: UIViewController {
     @IBOutlet var translateTextField: UITextField!
     @IBOutlet var requestButton: UIButton!
 
+    // let helper = UserDefaultsHelper()
+
     let pickerView = UIPickerView()
     let langList = Language.allCases
 
@@ -24,6 +26,12 @@ class TranslationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        UserDefaultsHelper.stadard.nickname     // UserDefaults.standard.string(forKey: "nickname")
+        UserDefaultsHelper.stadard.age          // UserDefaults.standard.string(forKey: "age")
+
+        UserDefaultsHelper.stadard.nickname = "칙촉"      // UserDefaults.standard.set("칙촉", forKey: "nickname")
+
 
         initialSetting()
     }
@@ -34,7 +42,7 @@ class TranslationViewController: UIViewController {
 
         guard let originalText = originalTextView.text else { return }
 
-        let url = "https://openapi.naver.com/v1/papago/detectLangs"
+        let url = EndPoint.detectLang.url
 
         let header: HTTPHeaders = [
             "X-Naver-Client-Id" : APIKey.naverId,
@@ -58,9 +66,16 @@ class TranslationViewController: UIViewController {
 
     }
 
+    func translate() {
+
+        TranslateAPIManager.shared.callRequest(text: originalTextView.text ?? "") { result in
+            self.translateTextView.text = result
+        }
+    }
+
     func translate(_ source: String) {
 
-        let url = "https://openapi.naver.com/v1/papago/n2mt"
+        let url = EndPoint.translate.url
         let header: HTTPHeaders = [
             "X-Naver-Client-Id" : APIKey.naverId,
             "X-Naver-Client-Secret" : APIKey.naverSecret
@@ -119,9 +134,16 @@ extension TranslationViewController {
 
     func initialSetting() {
         originalTextView.text = ""
+        originalTextView.layer.borderColor = UIColor.gray.cgColor
+        originalTextView.layer.borderWidth = 1
         translateTextView.text = ""
+        translateTextView.layer.borderColor = UIColor.gray.cgColor
+        translateTextView.layer.borderWidth = 1
         translateTextView.isEditable = false
+
         requestButton.setTitle("번역하기", for: .normal)
+        requestButton.tintColor = .white
+        requestButton.backgroundColor = .systemBlue
 
         pickerView.delegate = self
         pickerView.dataSource = self

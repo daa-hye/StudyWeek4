@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		535DCA192A85E363001D8299 /* TranslateAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DCA182A85E363001D8299 /* TranslateAPIManager.swift */; };
+		535DCA1B2A85F9F5001D8299 /* AsynkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DCA1A2A85F9F5001D8299 /* AsynkViewController.swift */; };
+		5397B3B42A8A022C00EBAA6E /* BoxOfficeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397B3B32A8A022C00EBAA6E /* BoxOfficeData.swift */; };
+		5397B3CF2A8D041E00EBAA6E /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5397B3CE2A8D041D00EBAA6E /* VideoData.swift */; };
 		53DC9AFF2A809664009B3304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9AFE2A809664009B3304 /* AppDelegate.swift */; };
 		53DC9B012A809664009B3304 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B002A809664009B3304 /* SceneDelegate.swift */; };
 		53DC9B032A809664009B3304 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B022A809664009B3304 /* ViewController.swift */; };
@@ -23,9 +27,18 @@
 		53DC9B622A83230B009B3304 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B612A83230B009B3304 /* VideoTableViewCell.swift */; };
 		53DC9B662A84768C009B3304 /* TranslationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B652A84768C009B3304 /* TranslationViewController.swift */; };
 		53DC9B682A84B4AA009B3304 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B672A84B4AA009B3304 /* Language.swift */; };
+		53DC9B6A2A85BA9D009B3304 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B692A85BA9D009B3304 /* ReusableViewProtocol.swift */; };
+		53DC9B6C2A85BD04009B3304 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B6B2A85BD04009B3304 /* UserDefaultsHelper.swift */; };
+		53DC9B6E2A85C513009B3304 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B6D2A85C513009B3304 /* EndPoint.swift */; };
+		53DC9B702A85C5C9009B3304 /* URL + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B6F2A85C5C9009B3304 /* URL + Extention.swift */; };
+		53DC9B722A85C77E009B3304 /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC9B712A85C77E009B3304 /* KakaoAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		535DCA182A85E363001D8299 /* TranslateAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateAPIManager.swift; sourceTree = "<group>"; };
+		535DCA1A2A85F9F5001D8299 /* AsynkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynkViewController.swift; sourceTree = "<group>"; };
+		5397B3B32A8A022C00EBAA6E /* BoxOfficeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeData.swift; sourceTree = "<group>"; };
+		5397B3CE2A8D041D00EBAA6E /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
 		53DC9AFB2A809664009B3304 /* StudyWeek4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyWeek4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DC9AFE2A809664009B3304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DC9B002A809664009B3304 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +54,11 @@
 		53DC9B612A83230B009B3304 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		53DC9B652A84768C009B3304 /* TranslationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationViewController.swift; sourceTree = "<group>"; };
 		53DC9B672A84B4AA009B3304 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		53DC9B692A85BA9D009B3304 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		53DC9B6B2A85BD04009B3304 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		53DC9B6D2A85C513009B3304 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		53DC9B6F2A85C5C9009B3304 /* URL + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + Extention.swift"; sourceTree = "<group>"; };
+		53DC9B712A85C77E009B3304 /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +97,26 @@
 				53DC9AFE2A809664009B3304 /* AppDelegate.swift */,
 				53DC9B002A809664009B3304 /* SceneDelegate.swift */,
 				53DC9B022A809664009B3304 /* ViewController.swift */,
+				5397B3B32A8A022C00EBAA6E /* BoxOfficeData.swift */,
 				53DC9B042A809664009B3304 /* Main.storyboard */,
+				535DCA1A2A85F9F5001D8299 /* AsynkViewController.swift */,
 				53DC9B612A83230B009B3304 /* VideoTableViewCell.swift */,
 				53DC9B292A81E786009B3304 /* VideoViewController.swift */,
+				53DC9B712A85C77E009B3304 /* KakaoAPIManager.swift */,
+				535DCA182A85E363001D8299 /* TranslateAPIManager.swift */,
 				53DC9B272A81C4D3009B3304 /* WeatherViewController.swift */,
 				53DC9B652A84768C009B3304 /* TranslationViewController.swift */,
+				53DC9B6F2A85C5C9009B3304 /* URL + Extention.swift */,
 				53DC9B1F2A809C5E009B3304 /* APIKey.swift */,
+				53DC9B6D2A85C513009B3304 /* EndPoint.swift */,
 				53DC9B672A84B4AA009B3304 /* Language.swift */,
 				53DC9B072A809665009B3304 /* Assets.xcassets */,
 				53DC9B092A809665009B3304 /* LaunchScreen.storyboard */,
 				53DC9B0C2A809665009B3304 /* Info.plist */,
 				53DC9B1B2A809BA2009B3304 /* .gitignore */,
+				53DC9B692A85BA9D009B3304 /* ReusableViewProtocol.swift */,
+				53DC9B6B2A85BD04009B3304 /* UserDefaultsHelper.swift */,
+				5397B3CE2A8D041D00EBAA6E /* VideoData.swift */,
 			);
 			path = StudyWeek4;
 			sourceTree = "<group>";
@@ -177,12 +204,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				53DC9B662A84768C009B3304 /* TranslationViewController.swift in Sources */,
+				53DC9B6A2A85BA9D009B3304 /* ReusableViewProtocol.swift in Sources */,
 				53DC9B2A2A81E786009B3304 /* VideoViewController.swift in Sources */,
 				53DC9B282A81C4D3009B3304 /* WeatherViewController.swift in Sources */,
+				53DC9B722A85C77E009B3304 /* KakaoAPIManager.swift in Sources */,
+				5397B3CF2A8D041E00EBAA6E /* VideoData.swift in Sources */,
 				53DC9B682A84B4AA009B3304 /* Language.swift in Sources */,
 				53DC9B032A809664009B3304 /* ViewController.swift in Sources */,
+				53DC9B6E2A85C513009B3304 /* EndPoint.swift in Sources */,
 				53DC9AFF2A809664009B3304 /* AppDelegate.swift in Sources */,
+				5397B3B42A8A022C00EBAA6E /* BoxOfficeData.swift in Sources */,
+				535DCA1B2A85F9F5001D8299 /* AsynkViewController.swift in Sources */,
+				53DC9B6C2A85BD04009B3304 /* UserDefaultsHelper.swift in Sources */,
+				53DC9B702A85C5C9009B3304 /* URL + Extention.swift in Sources */,
 				53DC9B622A83230B009B3304 /* VideoTableViewCell.swift in Sources */,
+				535DCA192A85E363001D8299 /* TranslateAPIManager.swift in Sources */,
 				53DC9B012A809664009B3304 /* SceneDelegate.swift in Sources */,
 				53DC9B202A809C5E009B3304 /* APIKey.swift in Sources */,
 			);

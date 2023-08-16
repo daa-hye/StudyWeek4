@@ -7,7 +7,6 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
 import Kingfisher
 
 struct Video {
@@ -48,51 +47,15 @@ class VideoViewController: UIViewController {
 
     func callRequest(query: String, page: Int) {
 
-        let text = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-
-        let url = "https://dapi.kakao.com/v2/search/vclip?query=\(text)&size=10&page=\(page)"
-        let header: HTTPHeaders = ["Authorization" : "\(APIKey.kakaoAK)"]
-
-        AF.request(url, method: .get, headers: header).validate(statusCode: 200...500).responseJSON { response in
-                    switch response.result {
-                    case .success(let value):
-                        let json = JSON(value)
-                        //print("JSON: \(json)")
-                        print(response.response?.statusCode)
-
-                        let statusCode = response.response?.statusCode ?? 500
-
-                        if statusCode == 200 {
-
-                            self.isEnd = json["meta"]["is_end"].boolValue
-
-                            for item in json["documents"].arrayValue {
-
-                                let author = item["author"].stringValue
-                                let date = item["datetime"].stringValue
-                                let playTime = item["play_time"].intValue
-                                let thumbnail = item["thumbnail"].stringValue
-                                let title = item["title"].stringValue
-                                let link = item["url"].stringValue
-
-                                let data = Video(author: author, date: date, playTime: playTime, thumbnail: thumbnail, title: title, link: link)
-
-                                self.videoList.append(data)
-                            }
-
-                            self.videoTableView.reloadData()
-
-                        } else {
-                            print("문제가 발생했어요 . 잠시 후 다시 시도해주세요")
-                        }
-
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
-
+        KakaoAPIManager.shared.callRequest(type: .video, query: query) { videoData in
+            let result = videoData.documents
+            for item in result {
+                let video = Video(author: item.author, date: item.datetime, playTime: item.playTime, thumbnail: item.thumbnail, title: item.title, link: item.url)
+                self.videoList.append(video)
+            }
+            self.videoTableView.reloadData()
+        }
     }
-
 }
 
 extension VideoViewController: UISearchBarDelegate {
@@ -117,7 +80,7 @@ extension VideoViewController : UITableViewDelegate, UITableViewDataSource, UITa
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "VideoTableViewCell") as? VideoTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoTableViewCell.identifier) as? VideoTableViewCell else { return UITableViewCell() }
 
         cell.titleLabel.text = videoList[indexPath.row].title
         cell.contentLabel.text = videoList[indexPath.row].contents
